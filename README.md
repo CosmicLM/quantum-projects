@@ -63,6 +63,31 @@ To replicate these experiments:
 
 ---
 
+### Project 2: Fault Tolerance
+
+## Project Overview
+This project implements a 3-qubit bit-flip error correction code to demonstrate the principles of Fault-Tolerant Quantum Computing. The primary objective is to validate data reliability by detecting and correcting errors without measuring—and thus destroying—the quantum information itself.
+
+## Architecture
+The circuit utilizes a total of 5 qubits:
+
+3 Data Qubits: Used to encode 1 Logical Qubit of information (redundancy).
+
+2 Ancilla Qubits: Used for non-destructive syndrome extraction.
+
+## Workflow
+Encoding: A single logical qubit is encoded across three physical qubits to establish protection against single bit-flip errors.
+
+Noise Simulation: An error is artificially introduced into the system by applying an X-gate (bit-flip) to one of the data transmission lines.
+
+Syndrome Extraction: We utilize Ancilla qubits to measure the parity (relationship) between neighboring data qubits. This allows us to detect errors indirectly without collapsing the data's superposition.
+
+Correction: A conditional lookup table processes the syndrome measurements to identify the location of the error and applies a corrective gate to restore the original state.
+
+
+
+
+
 ### 👤 Author
 **Eduardo de Souza Lima**
 * [GitHub Profile](https://github.com/CosmicLM)
