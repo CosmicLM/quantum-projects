@@ -30,7 +30,7 @@ The following diagram illustrates the gate logic used for the teleportation prot
 ### 2. Execution Results
 Histogram analysis confirming the probability distribution of the measured states.
 
-![Results Histogram](./quantum-teleportation/results/Results.png)
+![Results Histogram](./quantum-teleportation/results/results.png)
 
 ---
 
