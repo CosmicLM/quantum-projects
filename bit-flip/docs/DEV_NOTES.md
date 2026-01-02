@@ -24,7 +24,7 @@ If we measured these directly, we'd just get $00$ or $11$ and lose the $\alpha$ 
 
 For the 3-qubit code, we have two ancillas:Ancilla 1 ($S_1$): Checks the parity of Data Qubit 0 and Data Qubit 1.Ancilla 2 ($S_2$): Checks the parity of Data Qubit 1 and Data Qubit 2.A result of 0 means they match (good), and 1 means they are different (flag!).
 
-* **Outcome:** so, in summary, there are 3 qubits, and 2 ancilla qubits in our circuit. the main purpose is to measure the fault tolerance, the error instead of the data itself, to see if our quantum computer is reliable. we do this by encoding two qubits, and wiring one qubit to be a fault (applying an X gate, for exmaple). we then use the ancillas to measure the parity, or relation, of these qubits, and then with a conditional logic, we formulate a lookup table to correct all information from the data qubits. by doing so, we measure the fault tolerance of the ancillas, and the probability of them being wrong. 
+* **Outcome:** so, in summary, there are 3 qubits, and 2 ancilla qubits in our circuit. the main purpose is to measure the fault tolerance, the error instead of the data itself, to see if our quantum computer is reliable. we do this by encoding one qubit and wiring another to be a fault (applying an X gate, for exmaple). we then use the ancillas to measure the parity, or relation, of these qubits, and then with a conditional logic, we formulate a lookup table to correct all information from the data qubits. by doing so, we measure the parity of the data, and the syndrome of them being wrong. 
 
 ---
 
